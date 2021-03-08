@@ -1,4 +1,5 @@
 {
+    "tslint.autoFixOnSave": true ,
     "defaultSeverity": "error",
     "extends": "tslint-config-airbnb",
     "jsRules": {},
