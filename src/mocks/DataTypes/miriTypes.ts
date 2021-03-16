@@ -1,10 +1,22 @@
 export const dataTypes = {
   rootHierarchy: ['armagadon', 'bladerunners', 'interstellar', 'odyssey'],
   miriMail: 'turtleS.com',
-  idPrefixes: ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e',
-    'g', 'g',
+  idPrefixes: [
+    'e',
+    'e',
+    'e',
+    'e',
+    'e',
+    'e',
+    'e',
+    'e',
+    'g',
+    'g',
     'l',
     'j',
     'i',
-    'm', 'm', 'm'],
+    'm',
+    'm',
+    'm'
+  ]
 };

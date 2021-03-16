@@ -1,8 +1,7 @@
 // import fn from '../../src/config/fieldNames';
 
-const dataTypes =  {
-  RANK: ['unknown', 'rookie', 'champion', 'ultimate', 'mega'],
-
+export default {
+  RANKS: ['unknown', 'rookie', 'champion', 'ultimate', 'mega'],
   CURRENT_UNIT: ['nitro unit', 'jelly unit'],
   ENTITY_TYPE: ['digimon', 'agumon', 'tamar'],
   RESPONSIBILITY: ['none', 'HR', 'SO'],
@@ -31,5 +30,3 @@ const dataTypes =  {
   //   },
   // ],
 };
-
-export { dataTypes } ;

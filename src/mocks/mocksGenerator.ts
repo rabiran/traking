@@ -1,35 +1,41 @@
 import fs from 'fs';
 import faker from 'faker';
-import utils from './mockUtils';
 
-import { dataTypes } from './DataTypes/dataTypesList';
-import { akaEmployeeRecord, akaTelephoneRecord, adsRecord } from './recordsSchemes';
+import dataTypes from './DataTypes/dataTypesList';
+import utils from './mockUtils';
+import {
+  akaEmployeeRecord,
+  akaTelephoneRecord,
+  adsRecord,
+} from './recordsSchemes';
 
 const akaAmount = 400;
 const adsAmount = 250;
 
-const mis : string[] = [];
-const tzs : string[]  = [];
+const mis: string[] = [];
+const tzs: string[] = [];
 const employees: akaEmployeeRecord[] = [];
 const telephones: akaTelephoneRecord[] = [];
 const adUsers = [];
 const pictures = [];
 
 // Generating employee and telephones objects for aka
-for (let i = 0; i < akaAmount; i++) {
+for (let i = 0; i < akaAmount; i += 1) {
   employees.push({
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
     tz: tzs[i],
     mi: mis[i],
     clearance: faker.random.number({ min: 0, max: 10 }).toString(),
-    rnk: utils.randomElement(dataTypes.RANK),
+    rnk: utils.randomElement(dataTypes.RANKS),
     nstype: utils.randomElement(dataTypes.SERVICE_TYPE),
-    rld: faker.date.between(faker.date.future(10),
-                            faker.date.past(10)).toISOString(),
+    rld: faker.date
+      .between(faker.date.future(10), faker.date.past(10))
+      .toISOString(),
     hr: utils.randomElement(dataTypes.UNIT),
-    birthday: faker.date.between(faker.date.past(18),
-                                 faker.date.past(40)).toISOString(),
+    birthday: faker.date
+      .between(faker.date.past(18), faker.date.past(40))
+      .toISOString(),
     sex: utils.randomElement(['m', 'f']),
   });
   telephones.push({
